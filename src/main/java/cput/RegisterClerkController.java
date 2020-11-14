@@ -14,7 +14,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
-public class RegisterController implements Initializable {
+public class RegisterClerkController implements Initializable {
 
     /* Component names */
     @FXML
@@ -53,7 +53,7 @@ public class RegisterController implements Initializable {
 
     /* This function is called when the close button is clicked */
     public void btnCloseOnAction(ActionEvent e) {
-        // get the stage the close button is on, register.fxml
+        // get the stage the close button is on, createclerk.fxml
         Stage stage = (Stage) btnClose.getScene().getWindow();
         //close it
         stage.close();

@@ -19,7 +19,7 @@ public class App extends Application {
         /* Creates the application and shows the login form */
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         stage.initStyle(StageStyle.UNDECORATED);
-        stage.setScene(new Scene(root,560,400));
+        stage.setScene(new Scene(root,911,576));
         stage.show();
     }
 

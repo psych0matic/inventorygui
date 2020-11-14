@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cput.CreateClerkController">
+   <left>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="275.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="491.0" fitWidth="275.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/building.jpg" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="489.0" opacity="0.72" stroke="DODGERBLUE" strokeType="INSIDE" width="275.0" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="325.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="39.0" layoutY="99.0" prefHeight="25.0" prefWidth="248.0" text="Create New Clerk">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="133.0" prefHeight="45.0" prefWidth="248.0" text="To begin this journey, please select your university from the list below" textFill="#b5b5b5" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="192.0" text="University or college" textFill="#6f6f6f" />
+            <ComboBox fx:id="cmbUniversity" layoutX="39.0" layoutY="222.0" prefHeight="36.0" prefWidth="248.0" promptText="Please select" />
+            <Button fx:id="btnSave" layoutX="39.0" layoutY="305.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="250.0" text="Save &amp; Continue" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

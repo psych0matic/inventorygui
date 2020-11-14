@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -9,70 +14,97 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.collections.FXCollections?>
-<?import java.lang.String?>
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cput.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cput.LoginController">
    <right>
-      <AnchorPane prefHeight="407.0" prefWidth="228.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="576.0" prefWidth="517.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="imgBranding" fitHeight="400.0" fitWidth="228.0" pickOnBounds="true">
+            <ImageView fx:id="imgBranding" fitHeight="576.0" fitWidth="522.0" layoutX="-5.0" pickOnBounds="true">
                <image>
                   <Image url="@../Images/InventoryPic.png" />
                </image>
             </ImageView>
+            <AnchorPane layoutX="271.0" layoutY="23.0" prefHeight="440.0" prefWidth="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="452.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="68.0" prefWidth="172.0" text="FOR TESTING PURPOSES. REMOVE WHEN DONE WITH CODE" wrapText="true" />
+                  <Button fx:id="btnTestCreateClerk" layoutX="14.0" layoutY="82.0" mnemonicParsing="false" onAction="#btnTestCreateClerkOnAction" text="Create Clerk" />
+                  <Button fx:id="btnTestRegisterClerk" layoutX="14.0" layoutY="118.0" mnemonicParsing="false" onAction="#btnTestRegisterClerkOnAction" text="Register Clerk" />
+                  <Button fx:id="btnTestComplete" layoutX="14.0" layoutY="153.0" mnemonicParsing="false" onAction="#btnTestCompleteOnAction" text="Complete Profile" />
+                  <Button fx:id="btnTestDash" layoutX="14.0" layoutY="188.0" mnemonicParsing="false" onAction="#btnTestDashOnAction" text="Dashboard" />
+                  <Button fx:id="btnTestDevice" layoutX="14.0" layoutY="223.0" mnemonicParsing="false" onAction="#btnTestDeviceOnAction" text="Device type" />
+                  <Button fx:id="btnTestFurn" layoutX="14.0" layoutY="266.0" mnemonicParsing="false" onAction="#btnTestFurnOnAction" text="Furniture type" />
+                  <Button fx:id="btnTestOrders" layoutX="14.0" layoutY="302.0" mnemonicParsing="false" onAction="#btnTestOrdersOnAction" text="Orders" />
+                  <Button fx:id="btnTestStock" layoutX="14.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnTestStockOnAction" text="Stock" />
+                  <Button fx:id="btnTestUni" layoutX="14.0" layoutY="372.0" mnemonicParsing="false" onAction="#btnTestUniOnAction" text="University" />
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </right>
    <left>
-      <AnchorPane prefHeight="400.0" prefWidth="332.0" style="-fx-background-color: ECECE7;" BorderPane.alignment="CENTER">
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="396.0" style="-fx-background-color: FFF;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="imgLock" fitHeight="50.0" fitWidth="60.0" layoutX="141.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Images/lock.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="43.0" layoutY="167.0" text="Username">
+            <Label layoutX="47.0" layoutY="267.0" text="Email address">
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="txtUsername" layoutX="136.0" layoutY="164.0" promptText="Username" />
-            <Label layoutX="43.0" layoutY="208.0" text="Password">
+            <TextField fx:id="txtEmail" layoutX="47.0" layoutY="293.0" prefHeight="35.0" prefWidth="294.0" promptText="email" />
+            <Label layoutX="46.0" layoutY="340.0" text="Password">
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
-            <PasswordField fx:id="ptxtPassword" layoutX="136.0" layoutY="205.0" promptText="Password" />
-            <Button fx:id="btnLogin" layoutX="43.0" layoutY="292.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="32.0" prefWidth="244.0" text="Login">
+            <PasswordField fx:id="pwdPassword" layoutX="48.0" layoutY="369.0" prefHeight="34.0" prefWidth="293.0" promptText="Password" />
+            <Button fx:id="btnLogin" layoutX="73.0" layoutY="453.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="32.0" prefWidth="244.0" text="Login">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button fx:id="btnCancel" layoutX="43.0" layoutY="340.0" mnemonicParsing="false" onAction="#btnCancelOnAction" prefHeight="32.0" prefWidth="244.0" text="Cancel">
+            <Button fx:id="btnCancel" layoutX="73.0" layoutY="510.0" mnemonicParsing="false" onAction="#btnCancelOnAction" prefHeight="32.0" prefWidth="244.0" text="Cancel">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
-            <Label id="lblLoginStatus" fx:id="lblLoginStatus" alignment="CENTER" layoutX="43.0" layoutY="254.0" prefHeight="19.0" prefWidth="247.0" textFill="#ff1c1c">
+            <Label layoutX="50.0" layoutY="208.0" text="Login as:">
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label layoutX="43.0" layoutY="127.0" text="Login as:">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <ComboBox fx:id="cmbChoice" layoutX="136.0" layoutY="124.0" prefWidth="150.0" promptText="Select...">
+            <ComboBox fx:id="cmbChoice" layoutX="137.0" layoutY="205.0" prefWidth="150.0" promptText="Select...">
              <items>
                 <FXCollections fx:factory="observableArrayList">
-                   <String fx:value="Admin"/>
-                   <String fx:value="Control Clerk"/>
+                   <String fx:value="Admin" />
+                   <String fx:value="Control Clerk" />
                 </FXCollections>
              </items>
             </ComboBox>
+            <Label prefHeight="84.0" prefWidth="423.0" text="Inventory System" textFill="#0074f1">
+               <font>
+                  <Font name="SansSerif Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Label alignment="CENTER" layoutY="64.0" prefHeight="114.0" prefWidth="423.0" text="Manage your University Equipment with us." textFill="#0074f1" wrapText="true">
+               <font>
+                  <Font name="SansSerif Bold" size="26.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Label alignment="CENTER" layoutX="3.0" layoutY="163.0" prefHeight="28.0" prefWidth="423.0" text="Welcome back! Please login to your account." textFill="#3c3c3c" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="chkRemember" layoutX="50.0" layoutY="411.0" mnemonicParsing="false" text="Remember Me" />
+            <Hyperlink fx:id="hypForgotPassword" layoutX="236.0" layoutY="408.0" text="Forgot Password?" />
          </children>
       </AnchorPane>
    </left>
